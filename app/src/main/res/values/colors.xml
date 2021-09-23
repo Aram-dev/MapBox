@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">@color/mapboxBlue</color>
+    <color name="colorPrimaryDark">@color/mapboxBlueDark</color>
+    <color name="colorAccent">@color/mapboxRed</color>
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,4 +11,34 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="materialGrey">#F5F5F5</color>
+    <color name="materialDarkGrey">#DFDFDF</color>
+
+    <color name="mapboxWhite">#ffffff</color>
+    <color name="mapboxCyan">#3BB2D0</color>
+    <color name="mapboxGreen">#56B881</color>
+    <color name="mapboxBlue">#3887BE</color>
+    <color name="mapboxBlueDark">#1F6EA5</color>
+    <color name="mapboxPurple">#8A8ACB</color>
+    <color name="mapboxPurpleDark">#7171b2</color>
+    <color name="mapboxPurpleLight">#A4A4E5</color>
+
+    <color name="mapboxDenim">#50667F</color>
+    <color name="mapboxTeal">#41AFA5</color>
+    <color name="mapboxOrange">#F9886C</color>
+    <color name="mapboxRed">#E55E5E</color>
+    <color name="mapboxPink">#ED6498</color>
+    <color name="mapboxMustard">#FBB03B</color>
+    <color name="mapboxNavy">#28353D</color>
+    <color name="mapboxNavyDark">#222B30</color>
+
+    <color name="mapbox_offline_navy">#263d57</color>
+    <color name="mapbox_offline_light_navy">#949fac</color>
+    <color name="mapbox_offline_bright_blue">#4a90e2</color>
+    <color name="mapbox_offline_green">#58BA93</color>
+    <color name="mapbox_offline_material_grey_200">#EEEEEE</color>
+    <color name="mapbox_offline_white">#FFFFFF</color>
+
+    <color name="mapbox_offline_dim_scrim">#44000000</color>
 </resources>

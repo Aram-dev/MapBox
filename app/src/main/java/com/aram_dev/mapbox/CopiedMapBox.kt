@@ -6,7 +6,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.mapbox.android.core.permissions.PermissionsListener
 import com.mapbox.android.core.permissions.PermissionsManager
+import com.mapbox.geojson.Feature
+import com.mapbox.geojson.Point
 import com.mapbox.mapboxsdk.Mapbox
+import com.mapbox.mapboxsdk.geometry.LatLng
 import com.mapbox.mapboxsdk.location.LocationComponentActivationOptions
 import com.mapbox.mapboxsdk.location.LocationComponentOptions
 import com.mapbox.mapboxsdk.location.modes.CameraMode
@@ -22,6 +25,14 @@ class CopiedMapBox : AppCompatActivity(), OnMapReadyCallback, PermissionsListene
     private lateinit var permissionsManager: PermissionsManager
     private lateinit var mapboxMap: MapboxMap
     private lateinit var mapView: MapView
+    private val points = mapOf(
+        Pair("gh", LatLng(40.206900, 44.516977)),
+        Pair("gh", LatLng(40.206378, 44.522273)),
+        Pair("gh", LatLng(40.206633, 44.517493)),
+        Pair("gh", LatLng(40.209530, 44.513472)),
+        Pair("gh", LatLng(40.211709, 44.520786)),
+        Pair("gh", LatLng(40.210979, 44.514125)),
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +51,7 @@ class CopiedMapBox : AppCompatActivity(), OnMapReadyCallback, PermissionsListene
     override fun onMapReady(mapboxMap: MapboxMap) {
         this@CopiedMapBox.mapboxMap = mapboxMap
         mapboxMap.setStyle(
-            Style.TRAFFIC_DAY
+            Style.SATELLITE
         ) { style -> enableLocationComponent(style) }
     }
 
@@ -73,10 +84,24 @@ class CopiedMapBox : AppCompatActivity(), OnMapReadyCallback, PermissionsListene
 
             // Set the component's render mode
             locationComponent.renderMode = RenderMode.COMPASS
+
+            showPartnersOnMap(points)
         } else {
             permissionsManager = PermissionsManager(this)
             permissionsManager.requestLocationPermissions(this)
         }
+    }
+
+    private fun showPartnersOnMap(data: Map<String, LatLng>) {
+        val symbolLayerIconFeatureList: MutableList<Feature> = ArrayList()
+        for (driver in data.values) {
+            symbolLayerIconFeatureList.add(
+                Feature.fromGeometry(
+                    Point.fromLngLat(driver.latitude, driver.longitude)
+                )
+            )
+        }
+        mapboxMap.addFeatures(this, symbolLayerIconFeatureList)
     }
 
     @SuppressLint("MissingSuperCall")
