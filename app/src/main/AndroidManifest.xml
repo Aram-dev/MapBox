@@ -295,5 +295,57 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".pluginsapp.activity.FeatureOverviewActivity" />
         </activity>
+
+        <activity
+            android:name=".pluginsapp.activity.clustering.GeoJsonClusteringActivity"
+            android:description="@string/description_clustering"
+            android:label="@string/title_clustering"
+            tools:ignore="WrongManifestParent">
+            <meta-data
+                android:name="@string/category"
+                android:value="@string/category_annotation" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".pluginsapp.activity.FeatureOverviewActivity" />
+        </activity>
+
+        <activity
+            android:name=".pluginsapp.activity.infowindow.InfoWindowActivity"
+            android:description="@string/description_info_window"
+            android:label="@string/title_info_window"
+            tools:ignore="WrongManifestParent">
+            <meta-data
+                android:name="@string/category"
+                android:value="@string/category_annotation" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".pluginsapp.activity.FeatureOverviewActivity" />
+        </activity>
+
+        <activity
+            android:name=".pluginsapp.activity.infowindow.DynamicInfoWindowAdapterActivity"
+            android:description="@string/description_dynamic_info_window"
+            android:label="@string/title_dynamic_info_window"
+            tools:ignore="WrongManifestParent">
+            <meta-data
+                android:name="@string/category"
+                android:value="@string/category_annotation" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".pluginsapp.activity.FeatureOverviewActivity" />
+        </activity>
+
+        <activity
+            android:name=".pluginsapp.activity.infowindow.InfoWindowAdapterActivity"
+            android:description="@string/description_adapter_info_window"
+            android:label="@string/title_adapter_info_window"
+            tools:ignore="WrongManifestParent">
+            <meta-data
+                android:name="@string/category"
+                android:value="@string/category_annotation" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".pluginsapp.activity.FeatureOverviewActivity" />
+        </activity>
     </application>
 </manifest>
