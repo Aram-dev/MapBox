@@ -17,7 +17,8 @@
     <string name="category_ktx">Kotlin extension functions</string>
     <string name="category_markerview">View synchronisation</string>
     <string name="category_scalebar">Scalebar</string>
-    <string name="category_clustering">Clustering</string>
+    <string name="category_clustering">Symbol Clustering</string>
+    <string name="category_mapillary">Symbol Layer Mapillary</string>
 
     <!-- Titles -->
     <string name="title_traffic">Traffic Plugin</string>
@@ -47,6 +48,7 @@
     <string name="title_info_window">Info Window</string>
     <string name="title_dynamic_info_window">Dynamic Info Window</string>
     <string name="title_adapter_info_window">Adapter Info Window</string>
+    <string name="title_adapter_mapillary">Adapter Symbol Layer Mapillary</string>
 
     <!-- Descriptions -->
     <string name="description_traffic">Add Traffic layers to any Mapbox basemap.</string>
@@ -76,6 +78,7 @@
     <string name="description_info_window">Info Window on a map</string>
     <string name="description_dynamic_info_window">Dynamic Info Window on a map</string>
     <string name="description_adapter_info_window">Adapter Info Window on a map</string>
+    <string name="description_adapter_mapillary">Adapter Symbol Layer Mapillary</string>
 
     <!-- Place picker -->
     <string name="detailed_description_place_picker">Example shows how to launch the Place Picker using the Floating action button and receiving a result in onActivityResult.</string>

@@ -1,23 +1,21 @@
 package com.aram_dev.mapbox.pluginsapp.activity.infowindow
 
 import android.graphics.Color
-import com.aram_dev.mapbox.pluginsapp.utils.drawableToIcon
-import androidx.appcompat.app.AppCompatActivity
-import com.mapbox.mapboxsdk.maps.OnMapReadyCallback
-import com.mapbox.mapboxsdk.maps.MapboxMap
-import com.mapbox.mapboxsdk.annotations.Marker
-import com.mapbox.mapboxsdk.maps.MapboxMap.OnMapClickListener
-import com.mapbox.mapboxsdk.geometry.LatLng
-import com.mapbox.mapboxsdk.annotations.InfoWindow
-import android.widget.TextView
 import android.os.Bundle
-import com.aram_dev.mapbox.R
-import com.mapbox.mapboxsdk.camera.CameraUpdateFactory
-import com.aram_dev.mapbox.pluginsapp.activity.infowindow.DynamicInfoWindowAdapterActivity
-import com.mapbox.mapboxsdk.annotations.MarkerOptions
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
+import com.aram_dev.mapbox.R
+import com.aram_dev.mapbox.pluginsapp.utils.drawableToIcon
+import com.mapbox.mapboxsdk.annotations.Marker
+import com.mapbox.mapboxsdk.annotations.MarkerOptions
+import com.mapbox.mapboxsdk.camera.CameraUpdateFactory
+import com.mapbox.mapboxsdk.geometry.LatLng
 import com.mapbox.mapboxsdk.maps.MapView
+import com.mapbox.mapboxsdk.maps.MapboxMap
 import com.mapbox.mapboxsdk.maps.MapboxMap.InfoWindowAdapter
+import com.mapbox.mapboxsdk.maps.MapboxMap.OnMapClickListener
+import com.mapbox.mapboxsdk.maps.OnMapReadyCallback
 import com.mapbox.mapboxsdk.maps.Style
 import java.util.*
 

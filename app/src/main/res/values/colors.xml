@@ -41,4 +41,5 @@
     <color name="mapbox_offline_white">#FFFFFF</color>
 
     <color name="mapbox_offline_dim_scrim">#44000000</color>
+    <color name="mapboxGray">#607d9c</color>
 </resources>

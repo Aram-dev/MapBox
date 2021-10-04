@@ -33,6 +33,7 @@ import timber.log.Timber;
 import java.io.*;
 import java.lang.ref.WeakReference;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -250,7 +251,7 @@ public class BulkSymbolActivity extends AppCompatActivity implements AdapterView
 
     static String loadStringFromAssets(final Context context) throws IOException {
       InputStream is = context.getAssets().open("points.geojson");
-      BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+      BufferedReader rd = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
       return readAll(rd);
     }
 

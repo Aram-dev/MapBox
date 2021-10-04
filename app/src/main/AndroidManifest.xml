@@ -347,5 +347,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".pluginsapp.activity.FeatureOverviewActivity" />
         </activity>
+
+        <activity
+            android:name=".demo.SymbolLayerMapillaryActivity"
+            android:description="@string/description_adapter_mapillary"
+            android:label="@string/title_adapter_mapillary"
+            tools:ignore="WrongManifestParent">
+            <meta-data
+                android:name="@string/category"
+                android:value="@string/category_annotation" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".pluginsapp.activity.FeatureOverviewActivity" />
+        </activity>
     </application>
 </manifest>
