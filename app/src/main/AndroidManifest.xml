@@ -360,5 +360,31 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".pluginsapp.activity.FeatureOverviewActivity" />
         </activity>
+
+        <activity
+            android:name=".demo.AnimatedMarkerActivity"
+            android:description="@string/description_animate_marker"
+            android:label="@string/title_animate_marker"
+            tools:ignore="WrongManifestParent">
+            <meta-data
+                android:name="@string/category"
+                android:value="@string/category_annotation" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".pluginsapp.activity.FeatureOverviewActivity" />
+        </activity>
+
+        <activity
+            android:name=".demo.SymbolListenerActivity"
+            android:description="@string/description_symbol_listener"
+            android:label="@string/title_symbol_listener"
+            tools:ignore="WrongManifestParent">
+            <meta-data
+                android:name="@string/category"
+                android:value="@string/category_annotation" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".pluginsapp.activity.FeatureOverviewActivity" />
+        </activity>
     </application>
 </manifest>

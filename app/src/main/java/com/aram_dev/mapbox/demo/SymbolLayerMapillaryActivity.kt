@@ -132,7 +132,7 @@ class SymbolLayerMapillaryActivity : AppCompatActivity(), OnMapReadyCallback,
     override fun onMapClick(point: LatLng): Boolean {
         val screenPoint = mapboxMap!!.projection.toScreenLocation(point)
         val features = mapboxMap!!.queryRenderedFeatures(screenPoint, CALLOUT_LAYER_ID)
-        if (!features.isEmpty()) {
+        if (features.isNotEmpty()) {
             // we received a click event on the callout layer
             val feature = features[0]
             val symbolScreenPoint =
@@ -355,7 +355,7 @@ class SymbolLayerMapillaryActivity : AppCompatActivity(), OnMapReadyCallback,
      */
     private fun handleClickIcon(screenPoint: PointF): Boolean {
         val features = mapboxMap!!.queryRenderedFeatures(screenPoint, MAKI_LAYER_ID)
-        if (!features.isEmpty()) {
+        if (features.isNotEmpty()) {
             val title = features[0].getStringProperty(PROPERTY_TITLE)
             val featureList = featureCollection!!.features()
             for (i in featureList!!.indices) {
@@ -584,7 +584,7 @@ class SymbolLayerMapillaryActivity : AppCompatActivity(), OnMapReadyCallback,
         zoomAnimator.duration = CAMERA_ANIMATION_TIME
         zoomAnimator.interpolator = FastOutSlowInInterpolator()
         zoomAnimator.addUpdateListener { animation ->
-            mapboxMap!!.moveCamera(CameraUpdateFactory.zoomTo(animation.animatedValue as Double))
+            mapboxMap!!.moveCamera(CameraUpdateFactory.zoomTo((animation.animatedValue as Float).toDouble()))
         }
         return zoomAnimator
     }
@@ -597,7 +597,7 @@ class SymbolLayerMapillaryActivity : AppCompatActivity(), OnMapReadyCallback,
         bearingAnimator.duration = CAMERA_ANIMATION_TIME
         bearingAnimator.interpolator = FastOutSlowInInterpolator()
         bearingAnimator.addUpdateListener { animation ->
-            mapboxMap!!.moveCamera(CameraUpdateFactory.bearingTo(animation.animatedValue as Double))
+            mapboxMap!!.moveCamera(CameraUpdateFactory.bearingTo((animation.animatedValue as Float).toDouble()))
         }
         return bearingAnimator
     }
@@ -610,7 +610,7 @@ class SymbolLayerMapillaryActivity : AppCompatActivity(), OnMapReadyCallback,
         tiltAnimator.duration = CAMERA_ANIMATION_TIME
         tiltAnimator.interpolator = FastOutSlowInInterpolator()
         tiltAnimator.addUpdateListener { animation ->
-            mapboxMap!!.moveCamera(CameraUpdateFactory.tiltTo(animation.animatedValue as Double))
+            mapboxMap!!.moveCamera(CameraUpdateFactory.tiltTo((animation.animatedValue as Float).toDouble()))
         }
         return tiltAnimator
     }
