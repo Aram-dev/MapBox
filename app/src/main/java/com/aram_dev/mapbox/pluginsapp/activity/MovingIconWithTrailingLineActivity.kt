@@ -166,7 +166,7 @@ class MovingIconWithTrailingLineActivity : AppCompatActivity() {
                 call: Call<DirectionsResponse?>,
                 response: Response<DirectionsResponse?>,
             ) {
-                println(call.request().url().toString())
+//                println(call.request().url().toString())
 
                 // You can get the generic HTTP info about the response
                 Timber.d("Response code: %s", response.code())

@@ -57,7 +57,7 @@ class AnimatedMarkerActivity : AppCompatActivity(), OnMapReadyCallback,
         mapboxMap.setStyle(Style.SATELLITE_STREETS) { style ->
             style.addImage(
                 "marker_icon", BitmapFactory.decodeResource(
-                    resources, R.drawable.map_default_map_marker
+                    resources, R.drawable.mapbox_ic_place
                 )
             )
             geoJsonSource?.let { style.addSource(it) }

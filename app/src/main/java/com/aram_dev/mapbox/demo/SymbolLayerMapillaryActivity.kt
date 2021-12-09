@@ -775,7 +775,7 @@ class SymbolLayerMapillaryActivity : AppCompatActivity(), OnMapReadyCallback,
                     .build()
                 val response = okHttpClient.newCall(request).execute()
                 val featureCollection = FeatureCollection.fromJson(
-                    response.body()!!.string()
+                    response.body!!.string()
                 )
                 val mapillaryDataLoadResult = MapillaryDataLoadResult(featureCollection)
                 for (feature in featureCollection.features()!!) {

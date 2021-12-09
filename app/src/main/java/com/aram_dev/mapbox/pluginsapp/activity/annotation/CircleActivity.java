@@ -44,7 +44,7 @@ public class CircleActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_annotation);
 
-    TextView draggableInfoTv = findViewById(R.id.draggable_position_tv);
+//    TextView draggableInfoTv = findViewById(R.id.draggable_position_tv);
 
     mapView = findViewById(R.id.mapView);
     mapView.onCreate(savedInstanceState);
@@ -100,21 +100,21 @@ public class CircleActivity extends AppCompatActivity {
       circleManager.addDragListener(new OnCircleDragListener() {
         @Override
         public void onAnnotationDragStarted(Circle annotation) {
-          draggableInfoTv.setVisibility(View.VISIBLE);
+//          draggableInfoTv.setVisibility(View.VISIBLE);
         }
 
         @Override
         public void onAnnotationDrag(Circle annotation) {
-          draggableInfoTv.setText(String.format(
-            Locale.US,
-            "ID: %s\nLatLng:%f, %f",
-            annotation.getId(),
-            annotation.getLatLng().getLatitude(), annotation.getLatLng().getLongitude()));
+//          draggableInfoTv.setText(String.format(
+//            Locale.US,
+//            "ID: %s\nLatLng:%f, %f",
+//            annotation.getId(),
+//            annotation.getLatLng().getLatitude(), annotation.getLatLng().getLongitude()));
         }
 
         @Override
         public void onAnnotationDragFinished(Circle annotation) {
-          draggableInfoTv.setVisibility(View.GONE);
+//          draggableInfoTv.setVisibility(View.GONE);
         }
       });
     }));

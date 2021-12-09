@@ -66,7 +66,7 @@ public class SymbolActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_annotation);
 
-    TextView draggableInfoTv = findViewById(R.id.draggable_position_tv);
+//    TextView draggableInfoTv = findViewById(R.id.draggable_position_tv);
 
     mapView = findViewById(R.id.mapView);
     mapView.onCreate(savedInstanceState);
@@ -139,21 +139,21 @@ public class SymbolActivity extends AppCompatActivity {
       symbolManager.addDragListener(new OnSymbolDragListener() {
         @Override
         public void onAnnotationDragStarted(Symbol annotation) {
-          draggableInfoTv.setVisibility(View.VISIBLE);
+//          draggableInfoTv.setVisibility(View.VISIBLE);
         }
 
         @Override
         public void onAnnotationDrag(Symbol annotation) {
-          draggableInfoTv.setText(String.format(
-            Locale.US,
-            "ID: %s\nLatLng:%f, %f",
-            annotation.getId(),
-            annotation.getLatLng().getLatitude(), annotation.getLatLng().getLongitude()));
+//          draggableInfoTv.setText(String.format(
+//            Locale.US,
+//            "ID: %s\nLatLng:%f, %f",
+//            annotation.getId(),
+//            annotation.getLatLng().getLatitude(), annotation.getLatLng().getLongitude()));
         }
 
         @Override
         public void onAnnotationDragFinished(Symbol annotation) {
-          draggableInfoTv.setVisibility(View.GONE);
+//          draggableInfoTv.setVisibility(View.GONE);
         }
 
       });
